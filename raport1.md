@@ -1,7 +1,8 @@
 # Kinga Molik C++ 
 ***
 ## Kod
-```#include <iostream>
+```
+#include <iostream>
 #include <stdio.h>
 #include <vector>
 #include <math.h>
@@ -169,6 +170,7 @@ int main(int argc, char** argv) {
 
 	return 0;
 }
+
 ```
 ***
 ## ANALIZA
