@@ -54,7 +54,7 @@ double Derivative(vector<double> vec, int x)
 		case 1:
 			return 4 * vec[0] - 2 * (vec[1] + 1);
 		case 2:
-			return -2 * (vec[0] - 2 * vec[1] + 2);
+			return -2 * (vec[0] - 2 * vec[1] + vec[2]);
 		case 3:
 			return 2 * vec[2] - 2 * vec[1];
 		}
@@ -178,7 +178,7 @@ int main(int argc, char** argv) {
 Moją analizę dzielę na poszczególne funkcje podane w zadaniu, ponieważ mogą one różnie zachowywać się względem różnych parametrów c i eps.
 Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych w fukcji.
 ***
-### 1.	F(1) = x^4 – 4*x^2 + 4
+### 1.	F(1) = x^4 – 4 * x^2 + 4
 * c = 0.01	eps = 0.000001
   * dla wektora początkowego [-1.0]:  
     ```
@@ -231,11 +231,77 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
 *** 
 
 ### 2. F(2) = 3 * x^4 + 4 * x^3 - 12 * x^2 + 12 * y^2 - 24 * y
-    
-    
-    
-    
-    
-    
-    
+* c = 0.01	eps = 0.000001
+  * dla wektora początkowego [1.0, 1.0]:      
+    ```
+    iteracje: 1
+    punkty: 1, 1
+    ```
+  * dla wektora początkowego [-1.0, 1.0]: 
+    ```
+    iteracje: 15
+    punkty: -1.9999999, 1
+    ```
+    Widać, że algorytm bardzo szybko znajduje minimum globalne (-2,1) dla funcji F(2) i dla odpowiednich wartości wektora początkowego znajduje również minimum lokalne (1,1).
+    ***
+* c = 0.1	eps = 0.000001
+  * dla wektora początkowego [-1.0, 1.0]:      
+    ```
+    iteracje: 8
+    punkty: -nan(ind), 1
+    ```    
+    Przy zwiększeniu parametru c algorytm nie zwraca prawidłowego wyniku.
+    ***
+* c = 0.001	eps = 0.000001
+  * dla wektora początkowego [-1.0, 1.0]:      
+    ```
+    iteracje: 169
+    punkty: -1.9999872, 1
+    ```    
+    Przy zmniejszeniu c, zwiększa się kilkukrotnie ilość iteracji.
+    ***
+* c = 0.01	eps = 0.001
+  * dla wektora początkowego [-1.0, 1.0]:      
+    ```
+    iteracje: 9
+    punkty: -1.9996981, 1
+    ```      
+    Dla małego eps mamy stosunkowo małą ilosć iteracji i dokładny wynik.
+    ***
+### 3. F(3) = 2 * x^2 + 2 * y^2 + z^2 - 2 * x * y - 2 * y * z - 2 * x + 3
+* c = 0.01	eps = 0.000001
+  * dla wektora początkowego [-1.0, -1.0, -1.0]: 
+    ```
+    iteracje: 2314
+    punkty: 0.99988853, 0.99979914, 0.99974953
+    ```
+    Algorytm, by znaleźć minimum globalne (1,1,1) potrzebuje wykonać bardo dużo iteracji.
+    ***
+* c = 0.001	eps = 0.000001
+  * dla wektora początkowego [-0.1 -0.1 -0.1]: 
+      ```      
+      iteracje: 15842
+      punkty: 0.99887698, 0.99797639, 0.99747661
+    ```
+    Przy małym c, uzyskujemy mniej dokładne wyniki oraz algorytm wykonuje bardzo dużo iteracji.
+    ***
+* c = 0.3	eps = 0.000001
+  * dla wektora początkowego [-1.0, 1.0, 1.0]: 
+    ```
+    iteracje: 271
+    punkty: 1.0000004, 0.99999952, 1.0000002
+    ```
+    Najmniej iteracji i największą preyzję mamy dla stosunkowo dużego c.
+    ***
+* c = 0.3	eps = 0.00000001
+  * dla wektora początkowego [-1.0, -1.0, -1.0]: 
+    ```
+    iteracje: 336
+    punkty: 1, 1, 1
+    ```
+    Najbardziej precyzyjny wynik otrzymujemy dla dużego c i małego eps.
+
+
+
+
     
