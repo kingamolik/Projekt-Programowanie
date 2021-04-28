@@ -243,7 +243,7 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
     punkty: -1.9999999, 1
     ```
     Widać, że algorytm bardzo szybko znajduje minimum globalne (-2,1) dla funcji F(2) i dla odpowiednich wartości wektora początkowego znajduje również minimum lokalne (1,1).
-    ***
+***
 * c = 0.1	eps = 0.000001
   * dla wektora początkowego [-1.0, 1.0]:      
     ```
@@ -251,7 +251,7 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
     punkty: -nan(ind), 1
     ```    
     Przy zwiększeniu parametru c algorytm nie zwraca prawidłowego wyniku.
-    ***
+***
 * c = 0.001	eps = 0.000001
   * dla wektora początkowego [-1.0, 1.0]:      
     ```
@@ -259,7 +259,7 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
     punkty: -1.9999872, 1
     ```    
     Przy zmniejszeniu c, zwiększa się kilkukrotnie ilość iteracji.
-    ***
+***
 * c = 0.01	eps = 0.001
   * dla wektora początkowego [-1.0, 1.0]:      
     ```
@@ -267,7 +267,7 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
     punkty: -1.9996981, 1
     ```      
     Dla małego eps mamy stosunkowo małą ilosć iteracji i dokładny wynik.
-    ***
+***
 ### 3. F(3) = 2 * x^2 + 2 * y^2 + z^2 - 2 * x * y - 2 * y * z - 2 * x + 3
 * c = 0.01	eps = 0.000001
   * dla wektora początkowego [-1.0, -1.0, -1.0]: 
@@ -276,7 +276,7 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
     punkty: 0.99988853, 0.99979914, 0.99974953
     ```
     Algorytm, by znaleźć minimum globalne (1,1,1) potrzebuje wykonać bardo dużo iteracji.
-    ***
+***
 * c = 0.001	eps = 0.000001
   * dla wektora początkowego [-0.1 -0.1 -0.1]: 
       ```      
@@ -284,7 +284,7 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
       punkty: 0.99887698, 0.99797639, 0.99747661
     ```
     Przy małym c, uzyskujemy mniej dokładne wyniki oraz algorytm wykonuje bardzo dużo iteracji.
-    ***
+***
 * c = 0.3	eps = 0.000001
   * dla wektora początkowego [-1.0, 1.0, 1.0]: 
     ```
@@ -292,7 +292,7 @@ Przyjęłam oznaczenie dla funkcji: **F(i)**, gdzie *i* to ilość niewiadomych 
     punkty: 1.0000004, 0.99999952, 1.0000002
     ```
     Najmniej iteracji i największą preyzję mamy dla stosunkowo dużego c.
-    ***
+***
 * c = 0.3	eps = 0.00000001
   * dla wektora początkowego [-1.0, -1.0, -1.0]: 
     ```
